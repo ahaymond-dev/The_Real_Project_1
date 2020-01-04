@@ -1,10 +1,9 @@
-const locations = ["My Location"];
-        (function () {
+(function () {
             navigator.geolocation.getCurrentPosition(function (position) {
-       console.log(position.coords.latitude)
-       console.log(position.coords.longitude)
+       console.log(position.coords.latitude);
+       console.log(position.coords.longitude);
        
-        const queryUrl = "GET https://us1.locationiq.com/v1/reverse.php?key=7f4e3e6f4c7876&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&format=json";
+        const queryUrl = "https://us1.locationiq.com/v1/reverse.php?key=7f4e3e6f4c7876&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&format=json";
 
         $.ajax({
             url: queryUrl,
