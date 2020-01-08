@@ -13,13 +13,13 @@ function jokeScroll() {
   jokeBtn.scrollIntoView();
 }
 
-    // function for clicking button
-    $("button").on("click", function () {
+    // function for clicking joke button
+    $("#jokeBtn").on("click", function () {
 
-      // variable for button
+      // variable for joke button
       const dadJoke = $(this).attr("dad-joke");
 
-      // perform AJAX GET request
+      // perform AJAX GET request for dad joke
       $.ajax({
         url: "https://cors-anywhere.herokuapp.com/https://icanhazdadjoke.com/",
         contentType: "application/json",
@@ -27,22 +27,24 @@ function jokeScroll() {
         method: "GET"
       })
 
-        // prepend results to <div> in html body
+        // append results to <div> in index.html body
         .then(function (response) {
           const results = response;
           console.log(results)
-
           $("#dad-joke-here").empty()
           $("#dad-joke-here").append(results.joke);
 
-          const person = "dad"
-          const queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-            person + "&api_key=dc6zaTOxFJmzC&limit=25";
+          // variables for gif 
+          const dadGif = "dad"
+          const queryURL = "https://api.giphy.com/v1/gifs/search?q=" + dadGif + "&api_key=dc6zaTOxFJmzC&limit=25";
 
+          // perform AJAX GET request for dad gif
           $.ajax({
             url: queryURL,
             method: "GET"
           })
+            
+            // append results to <div> in index.html body
             .then(function (response) {
               console.log(response)
               var index = Math.floor(Math.random() * 25)
