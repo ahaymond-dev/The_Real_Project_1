@@ -1,13 +1,16 @@
+// function to scroll from map button on nav-bar to map section of body
 function mapScroll() {
   var mapBtn = document.getElementById("map");
   mapBtn.scrollIntoView();
 }
 
+// function to scroll from facts button on nav-bar to facts section of body
 function factScroll() {
   var factBtn = document.getElementById("facts");
   factBtn.scrollIntoView();
 }
 
+// function to scroll from joke button on nav-bar to joke section of body
 function jokeScroll() {
   var jokeBtn = document.getElementById("joke");
   jokeBtn.scrollIntoView();
@@ -42,13 +45,13 @@ $("#jokeBtn").on("click", function () {
   // variables for gif 
   const dadGif = "dad"
   const queryURL = "https://api.giphy.com/v1/gifs/search?q=" + dadGif + "&api_key=dc6zaTOxFJmzC&limit=25";
-    
+
   // perform AJAX GET request for dad gif
   $.ajax({
     url: queryURL,
     method: "GET"
   })
-                
+
     // append results to <div> in index.html body
     .then(function (response) {
       console.log(response)
