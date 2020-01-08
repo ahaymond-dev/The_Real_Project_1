@@ -45,13 +45,13 @@ $("#jokeBtn").on("click", function () {
   // variables for gif 
   const dadGif = "dad"
   const queryURL = "https://api.giphy.com/v1/gifs/search?q=" + dadGif + "&api_key=dc6zaTOxFJmzC&limit=25";
-    
+
   // perform AJAX GET request for dad gif
   $.ajax({
     url: queryURL,
     method: "GET"
   })
-                
+
     // append results to <div> in index.html body
     .then(function (response) {
       console.log(response)
