@@ -94,14 +94,15 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-8">
           <h1>Map</h1>
             <div id='map'></div>
        </div>
-       <div class="col-md-8">
+       <div class="col-md-4">
          <!--Radius API dropdown and lists can go here-->
           
          <select class="form-control form-control-lg">
+          <option class="">-select a place-</option>
           <option class="airport">Airport</option>
           <option class="restaurant">Restaurant</option> 
           <option class="bank">Bank</option> 
@@ -124,6 +125,22 @@
           <option class="stadium">Stadium</option>  
 
         </select>
+
+        <br>
+
+        <select class="form-control form-control-sm">
+          <option class="radius">-select a distance-</option>
+          <option class="radius">100 meters</option>
+          <option class="radius">500 meters</option>
+          <option class="radius">1000 meters</option>
+          <option class="radius">1500 meters</option>
+          <option class="radius">2000 meters</option>
+
+        </select>
+
+        <br>
+
+        <button type="button" class="btn btn-primary btn-lg btn-block radiusButton">Search</button>
 
        </div>
 
@@ -168,6 +185,7 @@
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaTRzDPJWkA5DdjBogt4SAiTWImyNapuA&libraries=places"></script>
   <script type="text/javascript" src="location.js"></script>
+  <script type="text/javascript" src="radius.js"></script>
 </body>
 
 </html>
