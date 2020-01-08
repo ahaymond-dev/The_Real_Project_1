@@ -10,10 +10,21 @@
             method: "GET"
         }).then(function(response) {
             console.log(response);
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://us1.locationiq.com/v1/nearby.php?key=YOUR_PRIVATE_TOKEN&lat=" + postion.coords.latitude + "&lon=" + position.coords.longitude + "&tag=restaurant&radius=300&format=json",
+                "method": "GET"
+              }
+              
+              $.ajax(settings).done(function (response) {
+                console.log(response);
+              });
+    
+        
         });
         
-
-    
+       
     },
     function (error) {
         console.log("The Locator was denied. :(")
@@ -59,6 +70,6 @@
         trackUserLocation: true
     }));
 
-
+   
 
     })();
