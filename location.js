@@ -1,34 +1,34 @@
 (function () {
-            navigator.geolocation.getCurrentPosition(function (position) {
-       console.log(position.coords.latitude);
-       console.log(position.coords.longitude);
+    //         navigator.geolocation.getCurrentPosition(function (position) {
+    //    console.log(position.coords.latitude);
+    //    console.log(position.coords.longitude);
        
-        const queryUrl = "https://us1.locationiq.com/v1/reverse.php?key=7f4e3e6f4c7876&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&format=json";
+    //     const queryUrl = "https://us1.locationiq.com/v1/reverse.php?key=7f4e3e6f4c7876&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&format=json";
 
-        $.ajax({
-            url: queryUrl,
-            method: "GET"
-        }).then(function(response) {
-            console.log(response);
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://us1.locationiq.com/v1/nearby.php?key=YOUR_PRIVATE_TOKEN&lat=" + postion.coords.latitude + "&lon=" + position.coords.longitude + "&tag=restaurant&radius=300&format=json",
-                "method": "GET"
-              }
+    //     $.ajax({
+    //         url: queryUrl,
+    //         method: "GET"
+    //     }).then(function(response) {
+    //         console.log(response);
+    //         var settings = {
+    //             "async": true,
+    //             "crossDomain": true,
+    //             "url": "https://us1.locationiq.com/v1/nearby.php?key=YOUR_PRIVATE_TOKEN&lat=" + postion.coords.latitude + "&lon=" + position.coords.longitude + "&tag=restaurant&radius=300&format=json",
+    //             "method": "GET"
+    //           }
               
-              $.ajax(settings).done(function (response) {
-                console.log(response);
-              });
+    //           $.ajax(settings).done(function (response) {
+    //             console.log(response);
+    //           });
     
         
-        });
+    //     });
         
        
-    },
-    function (error) {
-        console.log("The Locator was denied. :(")
-    });
+    // },
+    // function (error) {
+    //     console.log("The Locator was denied. :(")
+    // });
     //Add your Unwired Maps Access Token here (not the API token!)
     unwired.key = mapboxgl.accessToken = 'pk.0bf40e1baf8ee899f1d2021a0242e006';
     //Define the map and configure the map's theme
