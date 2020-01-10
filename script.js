@@ -1,18 +1,18 @@
 // function to scroll from map button on nav-bar to map section of body
 function mapScroll() {
-  var mapBtn = document.getElementById("map");
+  let mapBtn = document.getElementById("map");
   mapBtn.scrollIntoView();
 }
 
 // function to scroll from facts button on nav-bar to facts section of body
 function factScroll() {
-  var factBtn = document.getElementById("facts");
+  let factBtn = document.getElementById("facts");
   factBtn.scrollIntoView();
 }
 
 // function to scroll from joke button on nav-bar to joke section of body
 function jokeScroll() {
-  var jokeBtn = document.getElementById("joke");
+  let jokeBtn = document.getElementById("joke");
   jokeBtn.scrollIntoView();
 }
 
