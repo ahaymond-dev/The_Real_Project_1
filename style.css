@@ -47,16 +47,21 @@
   padding-top: 10%;
   min-height: 50vh;
 }
+
 #dad-joke-here {
   margin: 1%;
   width: 100%;
-  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #dad-gif-here {
   margin: 1%;
   width: 100%;
-  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #caption {
