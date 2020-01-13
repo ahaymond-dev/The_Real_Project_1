@@ -1,20 +1,18 @@
-// function to scroll from map button on nav-bar to map section of body
-function mapScroll() {
-  let mapBtn = document.getElementById("map");
-  mapBtn.scrollIntoView();
-}
+// functions to scroll from navbar button corresponding section of body (removed)
+// function mapScroll() {
+//   let mapBtn = document.getElementById("map");
+//   mapBtn.scrollIntoView();
+// }
 
-// function to scroll from facts button on nav-bar to facts section of body
-function factScroll() {
-  let factBtn = document.getElementById("facts");
-  factBtn.scrollIntoView();
-}
+// function factScroll() {
+//   let factBtn = document.getElementById("facts");
+//   factBtn.scrollIntoView();
+// }
 
-// function to scroll from joke button on nav-bar to joke section of body
-function jokeScroll() {
-  let jokeBtn = document.getElementById("joke");
-  jokeBtn.scrollIntoView();
-}
+// function jokeScroll() {
+//   let jokeBtn = document.getElementById("joke");
+//   jokeBtn.scrollIntoView();
+// }
 
 // function for clicking joke button
 $("#jokeBtn").on("click", function () {
@@ -35,7 +33,9 @@ $("#jokeBtn").on("click", function () {
       const results = response;
       console.log(results)
       $("#dad-joke-here").empty()
-      $("#dad-joke-here").append(results.joke);
+      var div = $("<div class='jokeText'>")
+      div.append(results.joke);
+      $("#dad-joke-here").append(div);
     });
 });
 
@@ -56,7 +56,7 @@ $("#jokeBtn").on("click", function () {
     .then(function (response) {
       console.log(response)
       var index = Math.floor(Math.random() * 25)
-      var img = $("<img>")
+      var img = $("<img class='shadow mb-5 rounded mt-5'>")
       img.attr("src", response.data[index].images.original.url)
       $("#dad-gif-here").empty()
       $("#dad-gif-here").append(img)
