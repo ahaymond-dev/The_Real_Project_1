@@ -1,3 +1,11 @@
+function updateLocation(data){
+    // Gets the LngLat object from the mapbox data
+    center = data.target.transform.center;
+    $("#lat").text(center.lat);
+    $("#lon").text(center.lng);
+    callTrailsAPI(center.lat, center.lng);
+}
+
 (function () {
     //         navigator.geolocation.getCurrentPosition(function (position) {
     //    console.log(position.coords.latitude);
@@ -37,7 +45,7 @@
         attributionControl: false, //need this to show a compact attribution icon (i) instead of the whole text
         style: unwired.getLayer("streets"), //get Unwired's style template
         zoom: 11,
-        center: [78.4008997, 17.4206485]
+        center: [-112.03543040001409,33.525842369582534]
     });
                 
     //Add Unwired's Layer Control plugin            
@@ -70,6 +78,8 @@
         trackUserLocation: true
     }));
 
-   
+    //    adding event listener to update as you dynamically move around map
+    map.on("load",updateLocation);
+    map.on("moveend",updateLocation);
 
     })();

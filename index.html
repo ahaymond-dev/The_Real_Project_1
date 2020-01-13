@@ -83,10 +83,6 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     
-    
-      
-    
-
     <div class="container">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -107,7 +103,6 @@
           </div>
           <div class="carousel-item" data-interval="4000">
             <img src="electronics-roadtrip.jpg " class="d-block w-100" alt="...">
-            
         </div>
         <div class="carousel-caption">
           <h1>DAD FACTS!</h1>
@@ -136,7 +131,6 @@
         </div>
         <div class="col-md-4" id="radiusList">
           <!--Radius API dropdown and lists can go here-->
-
           <select class="form-control form-control-lg">
             <option class="">-select a place-</option>
             <option class="airport">Airport</option>
@@ -159,11 +153,8 @@
             <option class="toilet">Toilet</option>
             <option class="park">Park</option>
             <option class="stadium">Stadium</option>
-
           </select>
-
           <br>
-
           <select class="form-control form-control-sm">
             <option class="radius">-select a distance-</option>
             <option class="radius">100 meters</option>
@@ -171,40 +162,23 @@
             <option class="radius">1000 meters</option>
             <option class="radius">1500 meters</option>
             <option class="radius">2000 meters</option>
-
           </select>
-
           <br>
-
           <button type="button" class="btn btn-primary btn-lg btn-block radiusButton">Search</button>
-
           <div class="printRadius">
-
-
           </div>
-
         </div>
-
-
       </div>
-
-
-
     <br>
     <br>
-
-      <!-- <div id="map">
-      <h1>Map</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nam optio distinctio animi. Dolores doloremque corrupti expedita sint quas minus, tempore nostrum autem enim quis error eum delectus culpa iste.</p>
-    </div> -->
+<!-- fact div starts here -->
       <div id="facts">
         <h1>Facts</h1>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nam optio distinctio animi. Dolores
-          doloremque corrupti expedita sint quas minus, tempore nostrum autem enim quis error eum delectus culpa iste.
-         
-        </p>
-        <button id="factsBtn" class="btn btn-secondary">Facts</button>
+       <div id="lat"></div>
+       <div id="lon"></div>
+       <div id="trailResponse"></div>
       </div>
+<!-- fact div ends here -->
       <div id="joke">
         <h1>Joke</h1>
         <h6>Fetch a random "Dad joke" to share with your fellow travelers AND an entertaining dad gif!</h6>
@@ -214,25 +188,21 @@
       </div>
 
     </div> <!-- /container -->
-
-
-
   </main>
-
-
   <footer class="container">
     <p>&copy; Company 2017-2019</p>
   </footer>
-  <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  crossorigin="anonymous"></script>
   <!-- <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaTRzDPJWkA5DdjBogt4SAiTWImyNapuA&libraries=places"></script>
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaTRzDPJWkA5DdjBogt4SAiTWImyNapuA&libraries=places"></script>
+  <script src="script.js"></script>
   <script type="text/javascript" src="location.js"></script>
   <script type="text/javascript" src="radius.js"></script>
+  <script type="text/javascript" src="fact.js"></script>
 </body>
 
 </html>
