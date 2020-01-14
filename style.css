@@ -47,16 +47,21 @@
   padding-top: 10%;
   min-height: 50vh;
 }
+
 #dad-joke-here {
   margin: 1%;
   width: 100%;
-  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #dad-gif-here {
   margin: 1%;
   width: 100%;
-  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #caption {
@@ -69,4 +74,10 @@
 
 #title {
   font-size: 475%;
+}
+
+.jokeText {
+  font-size: 20pt;
+  color: #000000;
+  text-shadow: 1px 1px 2px #000000;
 }
