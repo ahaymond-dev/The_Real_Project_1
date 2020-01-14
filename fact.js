@@ -7,7 +7,7 @@ function callTrailsAPI(lat, lng) {
     $.ajax({
         "async": true,
         "crossDomain": true,
-        "url": "https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=" + lat + "&lon=" + lng + "&radius=15",
+        "url": "https://cors-anywhere.herokuapp.com/https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=" + lat + "&lon=" + lng + "&radius=15",
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",
@@ -21,10 +21,16 @@ function callTrailsAPI(lat, lng) {
             if (response.data) {
                 for (let i = 0; i < 3 && i < response.data.length; i++) {
                     updatedText += response.data[i].name + "<br>";
-                    const trailImage = $("<img>");
-                    trailImage.attr("src",response.data[i].thumbnail);
-                    updatedText.prepend(trailImage);
-                    $("#img-appear-here").html(trailImage);
+                    // var img = $('<img id="">'); 
+                    // $(document.createElement('img'))
+                    // img.attr('src', response.data[i].thumbnail);
+                    var imgTag = '<img src="' + response.data[i].thumbnail +'">';
+                    updatedText += imgTag + "<br>" + response.data[i].description + "<br>";
+                    // img.prependTo('#imageHere');
+                    // const trailImage = $("img");
+                    // trailImage.attr("src",response.data[i].thumbnail);
+                    // updatedText += response.data[i].thumbnail + "<br>";
+                    // $("<imageHere>").text(updatedText);
                 }
             }
             $("#trailResponse").html(updatedText);
