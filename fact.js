@@ -1,30 +1,3 @@
-// var apiKey = "2E49A1A1-9E9F-3DVFM5c1lKalRzTlc5QmdocExDT3gwQT0912-8821-10F086F6D827";
-
-// $("#search").val()
-// ​
-// $("button").on("click", function(event){
-//     event.preventDefault();
-//     var city = $("#search").val()
-// ​
-//     var queryURL = "http://quickstats.nass.usda.gov/api/get_param_values/?key=apikey&param={parameter}" + city + "&APPID=" + apiKey;
-//     console.log(queryURL)
-    
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).then(function(response){
-//         console.log(response)
-//         var temp = response;
-        
-//         var tempDiv = $("state_name_div").text(`Temp: ${fTemp}˚F`);
-    
-//         var boxDiv = $("#box");
-//         $("#box").append(tempDiv)
-//     })
-// })
-
-// import "http://localhost:8001/jquery-3.4.1.js"
-
 var TRAIL_API_KEY = "aa54eadca0mshb4a43463e57c59fp16e59ajsn96c8e65823c1";
 // via curl -i -X POST "https://trefle.io/api/auth/claim?token=cm5tSlQ5cytLeVJUY2VMV2NVSUVNUT09&origin=http://localhost:8001"
 
@@ -50,6 +23,8 @@ function callTrailsAPI(lat, lng) {
                     updatedText += response.data[i].name + "<br>";
                     const trailImage = $("<img>");
                     trailImage.attr("src",response.data[i].thumbnail);
+                    updatedText.prepend(trailImage);
+                    $("#img-appear-here").html(trailImage);
                 }
             }
             $("#trailResponse").html(updatedText);
