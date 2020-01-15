@@ -1,19 +1,3 @@
-// functions to scroll from navbar button corresponding section of body (removed)
-// function mapScroll() {
-//   let mapBtn = document.getElementById("map");
-//   mapBtn.scrollIntoView();
-// }
-
-// function factScroll() {
-//   let factBtn = document.getElementById("facts");
-//   factBtn.scrollIntoView();
-// }
-
-// function jokeScroll() {
-//   let jokeBtn = document.getElementById("joke");
-//   jokeBtn.scrollIntoView();
-// }
-
 // function for clicking joke button
 $("#jokeBtn").on("click", function () {
 
