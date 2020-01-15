@@ -45,7 +45,7 @@ function updateLocation(data){
         attributionControl: false, //need this to show a compact attribution icon (i) instead of the whole text
         style: unwired.getLayer("streets"), //get Unwired's style template
         zoom: 11,
-        center: [-112.03543040001409,33.525842369582534]
+        center: [26.160723,87.395865]
     });
                 
     //Add Unwired's Layer Control plugin            
